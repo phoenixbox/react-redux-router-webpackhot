@@ -58,10 +58,11 @@
   "dependencies": {
     "deep-equal": "^1.0.1",
     "history": "^1.17.0",
+    "lodash": "^4.0.1",
     "react": "^0.14.2",
-    "react-router": "^1.0.3",
     "react-dom": "^0.14.2",
-    "redux": "^3.0.4",
-    "react-router-redux": "^2.1.0"
+    "react-router": "^1.0.3",
+    "react-router-redux": "^2.1.0",
+    "redux": "^3.0.4"
   }
 }

@@ -1,29 +1,43 @@
-import React from 'react'
-import { Link } from 'react-router'
-import { connect } from 'react-redux'
-import { routeActions } from 'react-router-redux'
-
-function App({ push, children }) {
-  return (
-    <div>
-      <header>
-        Links:
-        {' '}
-        <Link to="/">Home</Link>
-        {' '}
-        <Link to="/foo">Foo</Link>
-        {' '}
-        <Link to="/bar">Bar</Link>
-      </header>
-      <div>
-        <button onClick={() => push('/foo')}>Go to /foo</button>
-      </div>
-      <div style={{ marginTop: '1.5em' }}>{children}</div>
-    </div>
-  )
-}
+import React, {Component, PropTypes} from 'react';
+import { Link } from 'react-router';
+import { connect } from 'react-redux';
+import { routeActions } from 'react-router-redux';
 
 export default connect(
-  null,
+  (state) => ({user: state.auth.user}), // mapStateToProps
   routeActions
-)(App)
+)(class App extends Component {
+  static propTypes = {
+    user: PropTypes.object,
+    push: PropTypes.func.isRequired
+  };
+
+  static contextTypes = {
+    store: PropTypes.object.isRequired
+  };
+
+  handleLogout = (event) => {
+    event.preventDefault();
+    this.props.logout();
+  };
+
+  render() {
+    return (
+      <div>
+        <header>
+          Links:
+          {' '}
+          <Link to="/">Home</Link>
+          {' '}
+          <Link to="/users/1/chats/list">Chat List</Link>
+          {' '}
+          <Link to="/login">Login</Link>
+        </header>
+        <div>
+          <button onClick={() => this.props.push('/foo')}>Go to /foo</button>
+        </div>
+        <div style={{ marginTop: '1.5em' }}>{this.props.children}</div>
+      </div>
+    )
+  }
+})

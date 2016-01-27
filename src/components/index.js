@@ -1,4 +1,5 @@
 export App from './App'
 export Home from './Home'
-export Foo from './Foo'
-export Bar from './Bar'
+export List from './List'
+export Login from './Login'
+export Chats from './Chats'
