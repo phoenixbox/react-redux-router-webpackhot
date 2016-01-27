@@ -1,0 +1,61 @@
+{
+  "name": "react-redux-router-webpackhot",
+  "version": "0.0.1",
+  "description": "Barebones implementation of React, Redux & Redux Router with Webpack and HMR",
+  "scripts": {
+    "start": "node --harmony server.js",
+    "lint": "eslint src"
+  },
+  "engines": {
+    "node": "4.2.2",
+    "npm": "3.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phoenixbox/react-redux-router-webpackhot.git"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "boilerplate",
+    "hot",
+    "reload",
+    "hmr",
+    "live",
+    "webpack",
+    "redux",
+    "redux-router"
+  ],
+  "author": "Shane Rogers <shane@repllabs.com> (http://github.com/phoenixbox)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/phoenixbox/react-redux-router-webpackhot/issues"
+  },
+  "homepage": "https://github.com/phoenixbox/react-redux-router-webpackhot",
+  "devDependencies": {
+    "babel-core": "^6.0.20",
+    "babel-eslint": "^4.1.3",
+    "babel-loader": "^6.0.1",
+    "babel-preset-es2015": "^6.0.15",
+    "babel-preset-react": "^6.0.15",
+    "babel-preset-stage-0": "^6.0.15",
+    "eslint-plugin-react": "^3.6.2",
+    "react-hot-loader": "^1.3.0",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1",
+    "bundle-loader": "^0.5.0",
+    "css-loader": "^0.9.0",
+    "file-loader": "^0.7.2",
+    "less": "^1.7.5",
+    "less-loader": "^0.7.7",
+    "style-loader": "^0.8.0",
+    "url-loader": "^0.5.5"
+  },
+  "dependencies": {
+    "deep-equal": "^1.0.1",
+    "history": "^1.17.0",
+    "react": "^0.14.2",
+    "react-router": "^1.0.3",
+    "react-dom": "^0.14.2"
+  }
+}
